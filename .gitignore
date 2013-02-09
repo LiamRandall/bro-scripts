@@ -2,7 +2,7 @@
 *.pcap
 *.pcapng
 *.cap
-
+pcap/
 
 *.py[cod]
 

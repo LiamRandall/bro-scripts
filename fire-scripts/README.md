@@ -43,9 +43,9 @@ Liam Randall  [@Hectaman](https://twitter.com/hectaman)
 - - [X] http-fire.bro
 - - [ ] http-fire-count.bro
 - - [ ] http-fire-detail.bro
-- - [ ] http-fire-detail-raw.bro
+- - [-] http-fire-detail-raw.bro
 - [ ] dns
-- - [ ] dns-fire.bro
+- - [X] dns-fire.bro
 - - [ ] dns-fire-count.bro
 - - [ ] dns-fire-detail.bro
 - - [ ] dns-fire-detail-raw.bro
