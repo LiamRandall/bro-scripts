@@ -5,6 +5,7 @@ The "print line" has to be one of the oldest debugging and development technique
 
 These Bro scripts are intended to aid in the initial development and understanding of when Bro events are firing off as traffic drives the Bro Network Programming language forward through the state of each protocol.  These scripts have little productioin value however will help to the user to understand the order, frequency and information available to the user as each event fires.
 
+### Naming Convention
 We are using the following naming convention for each protocol script:
 
 **NAME-fire.bro:** 
@@ -15,6 +16,25 @@ As each event fires print do a printline to the screen.
 **NAME-fire-detail:** Warning, verbose. Print the raw variables out with some basic formating for each variable.
 
 **NAME-fire-detail-raw:** Warning verbose. Just print each of the raw variable out to the screen as each event fires.
+
+### Usage
+
+````
+wopr$ bro -C -r sample-http.pcap ./fire-scrirpts/ssl-tls-fire.bro
+````
+
+**Output**
+
+    wopr$ bro -C -r sample-http.pcap
+    event ssl_client_hello
+    event ssl_server_hello
+    event x509_certificate
+    event ssl_established
+    event ssl_client_hello
+    event ssl_server_hello
+    event ssl_established
+    ----------------------------------
+    Bro is done
 
 For a detailed and authoritative description of each Bro script please see:
 
