@@ -50,7 +50,7 @@ Liam Randall  [@Hectaman](https://twitter.com/hectaman)
 - - [ ] dns-fire-detail.bro
 - - [ ] dns-fire-detail-raw.bro
 - [ ] ssl-tls
-- - [ ] ssl-tls-fire.bro
+- - [X] ssl-tls-fire.bro
 - - [ ] ssl-tls-fire-count.bro
 - - [ ] ssl-tls-fire-detail.bro
 - - [ ] ssl-tls-fire-detail-raw.bro
