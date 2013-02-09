@@ -1,3 +1,9 @@
+# pcaps to ignore for testing
+*.pcap
+*.pcapng
+*.cap
+
+
 *.py[cod]
 
 # C extensions
