@@ -15,7 +15,9 @@ As each event fires print do a printline to the screen.
 
 **NAME-fire-detail:** Warning, verbose. Print the raw variables out with some basic formating for each variable.
 
-**NAME-fire-detail-raw:** Warning verbose. Just print each of the raw variable out to the screen as each event fires.
+**NAME-fire-detail-raw:** Warning, verbose. Just print each of the raw variable out to the screen as each event fires.
+
+**capture-events.bro:** Warning, very verbose. Capture all events and print their contents in one file.  
 
 ### Usage
 
@@ -25,7 +27,7 @@ wopr$ bro -r sample-ssl-tls.pcap ./fire-scrirpts/ssl-tls-fire.bro
 
 **Output**
 
-    wopr$ bro -r sample-http.pcap
+    wopr$ bro -r sample-http.pcap ./fire-scripts/ssl-tls-fire.bro
     event ssl_client_hello
     event ssl_server_hello
     event x509_certificate
@@ -35,6 +37,21 @@ wopr$ bro -r sample-ssl-tls.pcap ./fire-scrirpts/ssl-tls-fire.bro
     event ssl_established
     ----------------------------------
     Bro is done
+
+````
+wopr$ bro -r sample-ssl-tls.pcap ./fire-scripts/capture-events.bro
+wopr$ bro -x events.bst
+````
+
+**Output**
+
+    wopr$ bro -r sample-http.pcap ./fire-scripts/capture-events.bro
+    Date: Sun Feb 10 12:16:44 2013
+    Event [1360464997.544257] new_connection([id=[orig_h=192.168.4.137, orig_p=43849/tcp, resp_h=74.125.228.21, resp_p=443/tcp], orig=[size=0, state=0, num_pkts=0, num_bytes_ip=0, flow_label=0], resp=[size=0, state=0, num_pkts=0, num_bytes_ip=0, flow_label=0], start_time=1360464997.544257, duration=0.0, service={}, addl="", hot=0, history="", uid="cq18EfUt8ff", tunnel=<uninitialized>, dpd=<uninitialized>, conn=<uninitialized>, extract_orig=F, extract_resp=F, dns=<uninitialized>, dns_state=<uninitialized>, ftp=<uninitialized>, http=<uninitialized>, http_state=<uninitialized>, irc=<uninitialized>, smtp=<uninitialized>, smtp_state=<uninitialized>, socks=<uninitialized>, ssh=<uninitialized>, ssl=<uninitialized>, syslog=<uninitialized>])
+    Event [1360464997.917501] new_connection([id=[orig_h=192.168.4.137, orig_p=33093/tcp, resp_h=74.125.228.97, resp_p=443/tcp], orig=[size=0, state=0, num_pkts=0, num_bytes_ip=0, flow_label=0], resp=[size=0, state=0, num_pkts=0, num_bytes_ip=0, flow_label=0], start_time=1360464997.917501, duration=0.0, service={}, addl="", hot=0, history="", uid="iaqAdIFadVd", tunnel=<uninitialized>, dpd=<uninitialized>, conn=<uninitialized>, extract_orig=F, extract_resp=F, dns=<uninitialized>, dns_state=<uninitialized>, ftp=<uninitialized>, http=<uninitialized>, http_state=<uninitialized>, irc=<uninitialized>, smtp=<uninitialized>, smtp_state=<uninitialized>, socks=<uninitialized>, ssh=<uninitialized>, ssl=<uninitialized>, syslog=<uninitialized>])
+    Event [1360464998.035013] connection_established([id=[orig_h=192.168.4.137, orig_p=33093/tcp, resp_h=74.125.228.97, resp_p=443/tcp], orig=[size=0, state=4, num_pkts=1, num_bytes_ip=60, flow_label=0], resp=[size=0, state=4, num_pkts=0, num_bytes_ip=0, flow_label=0], start_time=1360464997.917501, duration=0.117512, service={}, addl="", hot=0, history="Sh", uid="iaqAdIFadVd", tunnel=<uninitialized>, dpd=<uninitialized>, conn=<uninitialized>, extract_orig=F, extract_resp=F, dns=<uninitialized>, dns_state=<uninitialized>, ftp=<uninitialized>, http=<uninitialized>, http_state=<uninitialized>, irc=<uninitialized>, smtp=<uninitialized>, smtp_state=<uninitialized>, socks=<uninitialized>, ssh=<uninitialized>, ssl=<uninitialized>, syslog=<uninitialized>])
+ 
+
 
 For a detailed and authoritative description of each Bro script please see:
 
