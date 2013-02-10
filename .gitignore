@@ -4,6 +4,9 @@
 *.cap
 pcap/
 
+#Sublime Text 2
+.state/
+
 *.py[cod]
 
 # C extensions

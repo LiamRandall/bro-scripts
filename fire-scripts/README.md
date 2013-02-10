@@ -20,12 +20,12 @@ As each event fires print do a printline to the screen.
 ### Usage
 
 ````
-wopr$ bro -C -r sample-http.pcap ./fire-scrirpts/ssl-tls-fire.bro
+wopr$ bro -r sample-ssl-tls.pcap ./fire-scrirpts/ssl-tls-fire.bro
 ````
 
 **Output**
 
-    wopr$ bro -C -r sample-http.pcap
+    wopr$ bro -r sample-http.pcap
     event ssl_client_hello
     event ssl_server_hello
     event x509_certificate
