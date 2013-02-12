@@ -1,5 +1,24 @@
 ##! update-twitter.bro
 ##! add action types to the notice framework, fire off twitter scripts
+##
+##  Other fun categories you may want to play with...
+##  Categories are deinfed throuh out Bro w/ adding to the Notice::Type
+##	HTTP::Incorrect_File_Type
+##	HTTP::Malware_Hash_Registry_Match
+##	HTTP::MD5
+##	HTTP::SQL_Injection_Attacker
+##	HTTP::SQL_Injection_Victim
+##	PacketFilter::Dropped_Packets
+##	Rogue_Access_Point
+##	SMTP::MD5
+##	Software::Vulnerable_Version
+##	SSH::Interesting_Hostname_Login
+##	SSH::Login
+##	SSL::Invalid_Server_Cert
+
+
+
+
 
 
 @load base/frameworks/notice/main
