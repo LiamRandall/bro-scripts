@@ -33,6 +33,7 @@ event notice(n: Notice::Info) &priority=-5
 		{
 			# CALL TWIITER HERE
 			local cmd = fmt("test.sh");
-			piped_exec(cmd, fmt("%s", c$id$orig_h));
+			# TODO: check for conn, may need to use n$src; may not have connection record
+			piped_exec(cmd, fmt("%s %s", n$conn$id$orig_h, n$note));
 		}
 	}
