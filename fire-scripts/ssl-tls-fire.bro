@@ -1,8 +1,8 @@
-## ssl-tls-fire.bro
+## ssl-tls-fire-count.bro
 ##
 ## Part of the Bro fire-scripts
 ## https://github.com/LiamRandall/bro-scripts/fire-scripts/README.md
-## Upon firing of each event for the ssl/tls protocols simply print a line.
+## This script will provide a series of metrics about the number of times eash script fired
 
 event ssl_client_hello(c: connection, version: count, possible_ts: time, session_id: string, ciphers: count_set)
 	{
